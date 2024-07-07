@@ -26,10 +26,10 @@ model UserProgress {
 }
 
 model Achievement {
-  id          String   @id @default(cuid())
-  name        String
-  description String
-  userProgress UserProgress @relation(fields: [userProgressId], references: [id])
+  id             String       @id @default(cuid())
+  name           String
+  description    String
+  userProgress   UserProgress @relation(fields: [userProgressId], references: [id])
   userProgressId String
-  createdAt   DateTime @default(now())
+  createdAt      DateTime     @default(now())
 }
